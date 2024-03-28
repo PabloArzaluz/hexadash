@@ -17,7 +17,7 @@ if(!isset($_POST['searchTerm'])){
 	$search = $_POST['searchTerm'];// Search text
 	
 	// Fetch records
-	$stmt = $connPDO->prepare("SELECT * FROM clientes_hx WHERE nombre like :nombre ORDER BY nombre LIMIT :limit");
+	$stmt = $connPDO->prepare("SELECT * FROM clientes_hx WHERE nombre like :nombre or empresa like :nombre ORDER BY nombre LIMIT :limit");
 	$stmt->bindValue(':nombre', '%'.$search.'%', PDO::PARAM_STR);
 	$stmt->bindValue(':limit', (int)$numberofrecords, PDO::PARAM_INT);
 	$stmt->execute();

@@ -110,18 +110,21 @@
                                  <h6>Datos del Cliente</h6>
                               </div>
                               <div class="card-body py-md-30">
-                                 <div class="mb-25 select-style2">
-                                    <div class="dm-select ">
-
-                                       <select name="select-alerts2" id="select-alerts2" class="form-control ">
-                                          <option value="0">Seleccione o Registre un cliente</option>
-                                          
-                                       </select>
-
+                                 <div class="row">
+                                 <div class="col-lg-9">
+                                    <div class="mb-25 select-style2">
+                                       <div class="dm-select ">
+                                          <select name="select-alerts2" id="select-alerts2" class="form-control ">
+                                             <option value="0">Seleccione o Registre un cliente</option>
+                                          </select>
+                                       </div>
                                     </div>
-
                                  </div>
-                                 <button id="botoncito" class="btn btn-sm btn-primary">Registrar Nuevo Cliente</button>
+                                 <div class="col-lg-3">
+                                    <button id="registrar_cliente" data-bs-toggle="modal" data-bs-target="#modal-registrar-nuevo-cliente" class="btn btn-sm btn-info">Registrar Nuevo Cliente</button>
+                                 </div>
+                                 </div>
+                                 
                               </div>
                            </div>
                            <!-- ends: .card -->
@@ -278,6 +281,7 @@
    </div>
    <div class="overlay-dark-sidebar"></div>
    <div class="customizer-overlay"></div>
+   <?php include("modals/mdl_registrar_cliente.php"); ?>
    <script>
       //Loader CLient
         $(document).ready(function(){
@@ -301,9 +305,8 @@
                     cache: true
                 }
             });
-            $("#botoncito").on("click",function(){
-               alert("s");
-               $("#select-alerts2").select2("val", "");
+            $("#registrar_cliente").on("click",function(){
+               $('#select-alerts2').val("0").trigger('change');
 
             });
         });
