@@ -3049,6 +3049,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .fs-10 {
   font-size: 10px;
 }
+.fs-11 {
+  font-size: 11px;
+}
 
 .fs-12 {
   font-size: 12px;
@@ -14218,7 +14221,7 @@ body.top-menu .navbar-left .customizer-trigger + .top-menu {
 }
 
 .dm-select {
-  min-width: 110px;
+  min-width: 310px;
 }
 .dm-select .select2-selection {
   height: 42px;
@@ -30476,6 +30479,8 @@ body:after {
 }
 
 /* Custom bootstrap classes */
+
+
 /*------------------------------------*\
     #-CSS Variables
 \*------------------------------------*/
@@ -30551,9 +30556,9 @@ body:after {
   --color-lighters: #f4f5f7;
   --color-lighten-rgba:173, 181, 217;
   --color-gray: #404040;
-  --color-gray-x: #5A5F7D;
-  --body-color: #666d92;
-  --text-color: #666d92;
+  --color-gray-x: #0a0b0f;
+  --body-color: #0a0b0f;
+  --text-color: #0a0b0f;
   --light-gray: #8C90A4;
   --light-gray-rgba: 173, 181, 217;
   --border-color: #F1F2F6;
@@ -30981,3 +30986,4 @@ body:after {
   }
 }
 /*# sourceMappingURL=maps/style.css.map */
+

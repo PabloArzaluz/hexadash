@@ -4,6 +4,7 @@
 	include("include/config.php");
 	include("include/functions.php");
    $menu_active = "dashboard";
+   $submenu_active = "";
 ?>
 <!doctype html>
 <html lang="es" dir="ltr">

@@ -7,7 +7,7 @@ $numberofrecords = 10;
 if(!isset($_POST['searchTerm'])){
 
 	// Fetch records
-	$stmt = $connPDO->prepare("SELECT * FROM clientes_hx ORDER BY nombre LIMIT :limit");
+	$stmt = $connPDO->prepare("SELECT * FROM clientes_hx ORDER BY 1 desc LIMIT :limit");
 	$stmt->bindValue(':limit', (int)$numberofrecords, PDO::PARAM_INT);
 	$stmt->execute();
 	$usersList = $stmt->fetchAll();
@@ -29,9 +29,15 @@ $response = array();
 
 // Read Data
 foreach($usersList as $user){
+	$empresa_string = "";
+	if($user['empresa'] == "" ){
+		$empresa_string = "";
+	} else{
+		$empresa_string = " | Empresa: ".$user['empresa'];
+	}
 	$response[] = array(
 		"id" => $user['id_clientes_hx'],
-		"text" => "Cliente: ".$user['nombre']." | Empresa:".$user['empresa']." | Telefonos:".$user['telefonos']." | Correo:".$user['correo']." | Direccion:".$user['direccion'],
+		"text" => $user['nombre']." ".$empresa_string." | ".$user['telefonos']." | ".$user['correo']." | ".$user['direccion'],
 	);
 }
 

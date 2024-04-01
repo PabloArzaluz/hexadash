@@ -44,8 +44,7 @@
     showWeek: true
   });
   $("#datepicker8").datepicker({
-    minDate: -20,
-    maxDate: "+1M +10D"
+    dateFormat: 'yy-mm-dd'
   });
   $('#datepicker').on('clcik', function () {
     if (this.id == "add") {
@@ -1080,6 +1079,26 @@
 
   $("#select-search,.kb__select,.select-search").select2({
     placeholder: "Search a person",
+    dropdownCssClass: "category-member",
+    allowClear: true,
+  });
+  $("#select-search-recibido-por").select2({
+    placeholder: "Ingresa algun nombre",
+    dropdownCssClass: "category-member",
+    allowClear: true,
+  });
+  $("#select-search-tipo-equipo").select2({
+    placeholder: "Ingresa un tipo de equipo",
+    dropdownCssClass: "category-member",
+    allowClear: true,
+  });
+  $("#select-search-marca-equipo").select2({
+    placeholder: "Ingresa una marca de equipo",
+    dropdownCssClass: "category-member",
+    allowClear: true,
+  });
+  $("#select-search-asignacion-dpto").select2({
+    placeholder: "Ingresa un Departamento a Asignar",
     dropdownCssClass: "category-member",
     allowClear: true,
   });

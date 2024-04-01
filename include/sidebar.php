@@ -2,7 +2,7 @@
             <div class="sidebar__menu-group">
                <ul class="sidebar_nav">
                   <li>
-                     <a href="changelog.html" <?php if($menu_active == "dashboard") echo ' class="active" '; ?>>
+                     <a href="dashboard.php" <?php if($menu_active == "dashboard") echo ' class="active" '; ?>>
                      <span class="nav-icon uil uil-create-dashboard"></span>
                         <span class="menu-text">Dashboard</span>
                         <span class="badge badge-info-10 menuItem rounded-pill">v1.0</span>
@@ -22,7 +22,7 @@
                            <a href="nueva-orden-servicio.php" <?php if($submenu_active == "nueva-orden") echo ' class="active" '; ?>>Nueva OS</a>
                         </li>
                         <li class="">
-                           <a href="read-email.html">Historial</a>
+                           <a href="listado_os.php" <?php if($submenu_active == "listado-ordenes") echo ' class="active" '; ?>>Historial OS</a>
                         </li>
                      </ul>
                   </li>
